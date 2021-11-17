@@ -53,3 +53,7 @@ app.get('/webhook', (req, res) => {
     }
   }
 });
+
+app.get('/*', function (req, res, next) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
